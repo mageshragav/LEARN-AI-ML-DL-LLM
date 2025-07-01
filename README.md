@@ -80,7 +80,7 @@ Below is a weekly breakdown of the key topics, subtopics, and projects covered i
 - Topics: Python installation, virtual environments, Jupyter, VS Code
 - Subtopics: Variables, data types, input/output
 - 🧪 Exercise: User input, calculator
-- 📌 Project: Script to read invoice and print summary
+- 📌 Project: 
 
 **Day 2 – Control Flow & Functions**
 - Topics: If-else, loops, `def`, lambda, map, filter
