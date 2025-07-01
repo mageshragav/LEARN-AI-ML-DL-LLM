@@ -57,7 +57,7 @@ Below is a weekly breakdown of the key topics, subtopics, and projects covered i
 
 | 🗓️ **Week** | 🔍 **Focus Area** | 📚 **Topics Covered** | 🧪 **Projects / Exercises** |
 |-------------|------------------|------------------------|-----------------------------|
-| **Week 1** | Python & Programming | Python setup, variables, control flow, functions, data structures, file I/O, OOP | Invoice reader, grading CLI, phonebook, CSV tracker, library system |
+| **Week 1** | Python & Programming | Python setup, variables, control flow, functions, data structures, file I/O, OOP |  grading CLI, phonebook, CSV tracker, library system |
 | **Week 2** | Math, Stats & EDA | Linear algebra, probability distributions, hypothesis testing, pandas, matplotlib, seaborn | Matrix calculator, A/B tester, EDA on flights, funding dashboard |
 | **Week 3** | Machine Learning | Regression, classification, decision trees, ensemble (XGBoost), full pipeline | House price predictor, heart disease detector, Titanic model, stacked classifier |
 | **Week 4** | Deep Learning (PyTorch) | Tensors, autograd, ANN, CNN, model saving/loading | Churn predictor, digit recognizer, Streamlit model deployment |
