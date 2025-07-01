@@ -4,7 +4,7 @@
 
 
 <p align="center">
-  <img src="banner.jpg" alt="AI Learning Journey Banner" width="100%">
+  <img src="assets/banner.jpg" alt="AI Learning Journey Banner" width="100%">
 </p>
 
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yourusername)
