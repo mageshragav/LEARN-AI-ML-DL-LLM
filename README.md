@@ -53,8 +53,6 @@ Each week contains:
 
 ## 🧭 Topics & Subtopics Covered
 
-## 📘 Topics & Subtopics Covered – AI Engineer Bootcamp
-
 Below is a weekly breakdown of the key topics, subtopics, and projects covered in this 10-week journey.
 
 | 🗓️ **Week** | 🔍 **Focus Area** | 📚 **Topics Covered** | 🧪 **Projects / Exercises** |
