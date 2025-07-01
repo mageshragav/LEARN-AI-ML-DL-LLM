@@ -53,20 +53,23 @@ Each week contains:
 
 ## 🧭 Topics & Subtopics Covered
 
-| 🗂️ Topic | 📒 Subtopics |
-|---------|--------------|
-| **Week 1: Python for AI** | Python basics, control flow, functions, data structures, OOP, file handling |
-| **Week 2: Math, Stats & EDA** | Linear algebra, probability, hypothesis testing, pandas, matplotlib, seaborn |
-| **Week 3: ML Fundamentals** | Regression, classification, decision trees, ensemble, model pipelines |
-| **Week 4: Deep Learning (PyTorch)** | PyTorch basics, ANN, CNN, saving models, deployment |
-| **Week 5: NLP with PyTorch** | Preprocessing, embeddings, RNN, LSTM, BiLSTM, NLP projects |
-| **Week 6: Transformers & LLMs** | Attention, transformers, BERT, T5, GPT, summarizers, chatbots |
-| **Week 7: LangChain & Vector DBs** | Prompt chains, embeddings, Chroma, FAISS, RAG pipelines |
-| **Week 8: RAG, Ollama, Groq** | Local LLMs, hybrid retrieval, Groq API, evaluation dashboards |
-| **Week 9: Agentic AI (CrewAI)** | AutoGPT, multi-agent flows, planning agents, research assistants |
-| **Week 10: GenAI Deployment** | FastAPI, Streamlit, Docker, ONNX, Hugging Face Spaces |
-| **Week 11: LLMOps** | Evaluation, prompt tracking, versioning, latency, caching |
-| **Week 12: Capstones** | Resume screener, invoice bot, document Q&A, portfolio app |
+## 📘 Topics & Subtopics Covered – AI Engineer Bootcamp
+
+Below is a weekly breakdown of the key topics, subtopics, and projects covered in this 10-week journey.
+
+| 🗓️ **Week** | 🔍 **Focus Area** | 📚 **Topics Covered** | 🧪 **Projects / Exercises** |
+|-------------|------------------|------------------------|-----------------------------|
+| **Week 1** | Python & Programming | Python setup, variables, control flow, functions, data structures, file I/O, OOP | Invoice reader, grading CLI, phonebook, CSV tracker, library system |
+| **Week 2** | Math, Stats & EDA | Linear algebra, probability distributions, hypothesis testing, pandas, matplotlib, seaborn | Matrix calculator, A/B tester, EDA on flights, funding dashboard |
+| **Week 3** | Machine Learning | Regression, classification, decision trees, ensemble (XGBoost), full pipeline | House price predictor, heart disease detector, Titanic model, stacked classifier |
+| **Week 4** | Deep Learning (PyTorch) | Tensors, autograd, ANN, CNN, model saving/loading | Churn predictor, digit recognizer, Streamlit model deployment |
+| **Week 5** | NLP with PyTorch | Preprocessing, embeddings (TF-IDF, Word2Vec), LSTM, BiLSTM, GRU | Text cleaner, word similarity, text generator, sentiment classifier, resume parser |
+| **Week 6** | Transformers & LLMs | Attention, transformers (BERT, GPT, T5), positional encoding, prompt engineering | Transformer visualizer, chatbot, summarizer, prompt testing dashboard |
+| **Week 7** | LangChain & LLM Tools | Prompt chaining, embeddings, FAISS, ChromaDB, LangServe, LangSmith | Q&A bot, semantic search, PDF chatbot, RAG assistant, tracing tools |
+| **Week 8** | RAG, Ollama, Groq | Retrieval, Ollama setup, Groq API, compression, evaluation | File-based RAG, hybrid QA bot, Groq fast chatbot, LangSmith dashboard |
+| **Week 9** | Agentic AI (CrewAI + LangGraph) | ReAct, AutoGPT, multi-agent flows, LangGraph workflows, browser + SQL tools | SEO team agent, tool-using agents, document Q&A assistant |
+| **Week 10** | GenAI Deployment & Portfolio | FastAPI, Streamlit, Docker, ONNX, LLMOps best practices | Containerized models, full-stack AI app, prompt tracker, resume-ready portfolio |
+
 
 📁 Each week is a folder. Each subtopic is a **Jupyter notebook** inside.  
 🧪 Each project is in a dedicated `projects/` subfolder.
@@ -656,21 +659,31 @@ Each week contains:
 
 
 
+## 🛠️ Tech Stack Overview
 
-## 🧠 Tools, Libraries & Stack
+This bootcamp and project suite uses a powerful and modern AI/ML ecosystem:
 
-| Category | Stack |
-|---------|--------|
-| **Language** | Python |
-| **Core Libraries** | NumPy, Pandas, Matplotlib, Seaborn |
-| **ML/DL** | scikit-learn, XGBoost, PyTorch |
-| **NLP & LLMs** | HuggingFace Transformers, spaCy, NLTK |
-| **LangChain Tools** | LangChain, FAISS, Chroma, Groq, Ollama, LangGraph |
-| **Deployment** | FastAPI, Streamlit, Docker, ONNX |
-| **Agentic AI** | CrewAI, LangGraph, ReAct, OpenAI Tools |
-| **DevOps & Tracking** | Git, GitHub, LangSmith, Weights & Biases |
-| **Vision & OCR** | EasyOCR, YOLOv8, pdfplumber, PaddleOCR |
-| **Speech** | Whisper, pyttsx3, ElevenLabs |
+| 💡 **Category** | ⚙️ **Tools / Frameworks / Libraries** |
+|----------------|----------------------------------------|
+| **Languages** | Python, Markdown, Bash |
+| **Core Python Libraries** | NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn |
+| **Deep Learning** | PyTorch, Torchvision, ANN, CNN, LSTM, GRU |
+| **Machine Learning** | Scikit-learn, XGBoost, SMOTE, GridSearchCV |
+| **NLP & Transformers** | NLTK, spaCy, HuggingFace Transformers, SentenceTransformers |
+| **LLMs & Generative AI** | OpenAI (GPT-4/GPT-4o), Mistral, T5, BERT, DistilBERT, BART |
+| **LangChain Ecosystem** | LangChain, LangServe, LangGraph, LangSmith |
+| **Vector Databases** | FAISS, ChromaDB |
+| **Prompt Engineering** | Few-shot, Chain-of-Thought (CoT), Function Calling |
+| **Agentic AI** | CrewAI, ReAct, AutoGPT agents, Agent workflows |
+| **OCR & Document Parsing** | pdfplumber, PyMuPDF, PaddleOCR, EasyOCR, Tesseract |
+| **Speech & Audio** | OpenAI Whisper, pyttsx3, Coqui TTS, ElevenLabs |
+| **Computer Vision** | YOLOv8, CLIP, OpenCV, Detectron2 |
+| **Web Scraping / APIs** | Arxiv API, YouTube API, SerpAPI |
+| **Deployment & DevOps** | Streamlit, FastAPI, Docker, ONNX, Vercel, Render |
+| **Tracking & Evaluation** | LangSmith, Weights & Biases |
+| **Frontend / Visualization** | Streamlit, Gradio, Mermaid.js, Plotly, Altair |
+| **Data Formats & IO** | CSV, JSON, YAML, PDF, Markdown |
+| **Utilities & Extras** | Pandas Profiling, Regex, Function calling, REPL tool |
 
 ---
 
