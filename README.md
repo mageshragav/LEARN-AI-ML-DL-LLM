@@ -348,312 +348,331 @@ Below is a weekly breakdown of the key topics, subtopics, and projects covered i
 
 ## 🧩 Featured Real-World Projects
 
-### 🔹 Basic Python & EDA
+✨ **AI/ML PROJECT ROADMAP** ✨
+*Ordered: Basic → Advanced | Format: Line-by-Line*
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🟢 **LEVEL 1: FOUNDATION**
+*Basic Python, EDA, and Classical ML*
+
+🧾 **Invoice Data Extractor**
+🧠 Concept: File I/O, OOP, Regex for extracting structured data (items, totals, dates) from CSV/PDF invoices
+🛠️ Tools: Python, Regex, pdfplumber, PyPDF2, JSON schema validation
+🚀 Production: Handle diverse PDF formats • Error handling for malformed files • Output validation • Retry logic for failed parses
+
+📊 **Startup Funding EDA Dashboard**
+🧠 Concept: Visualize funding trends by city, sector, and year for exploratory data analysis
+🛠️ Tools: Pandas, Seaborn, Matplotlib, Jupyter, Plotly (optional)
+🚀 Production: Interactive filtering widgets • Responsive design • Automated data refresh • Export functionality for reports
+
+🏠 **House Price Prediction**
+🧠 Concept: Regression model predicting house prices using size, location, rooms with feature engineering
+🛠️ Tools: sklearn pipeline, Linear Regression, feature scaling, cross-validation, MLflow
+🚀 Production: Model versioning • Input validation API • Prediction confidence intervals • Drift monitoring for retraining
+
+💳 **Loan Default Risk Classifier**
+🧠 Concept: Binary classification for loan default prediction with imbalance handling and feature engineering
+🛠️ Tools: RandomForest, XGBoost, SMOTE, sklearn, SHAP for explainability
+🚀 Production: Business-metric threshold tuning • Feature drift monitoring • SHAP reports for compliance • Audit logging
+
+🚢 **Titanic Survival Predictor**
+🧠 Concept: Classification model using Decision Tree + Grid Search with interactive user frontend
+🛠️ Tools: sklearn, Streamlit, pandas, joblib for serialization
+🚀 Production: Model serialization • Input sanitization • Docker deployment config • A/B testing framework
+
+💼 **Customer Churn Prediction (ANN)**
+🧠 Concept: Neural network for churn prediction using customer tenure, balance, activity patterns
+🛠️ Tools: PyTorch, Dropout layers, custom Dataset/DataLoader, TorchScript/ONNX export
+🚀 Production: Model export for inference • Batch processing support • Prediction distribution monitoring • Concept drift alerts
+
+✍️ **Handwritten Digit Recognizer (CNN)**
+🧠 Concept: CNN architecture for MNIST digit classification with accuracy evaluation and hyperparameter tuning
+🛠️ Tools: PyTorch, CNN layers, torchvision transforms, TensorBoard for logging
+🚀 Production: Image preprocessing standardization • Model quantization for edge • Confidence thresholding • Performance benchmarking
+
+📰 **Fake News Detection (RNN/LSTM)**
+🧠 Concept: Text classification using RNN/LSTM with TF-IDF/Word2Vec embeddings for fake news identification
+🛠️ Tools: PyTorch, FakeNewsNet, TF-IDF, Word2Vec, nltk/spaCy, sklearn metrics
+🚀 Production: Text normalization pipeline • Scheduled retraining • False positive monitoring • Model registry integration
+
+🛍️ **Image Classifier for Products**
+🧠 Concept: Classify eCommerce product images into categories for catalog management and search enhancement
+🛠️ Tools: PyTorch, CNN architectures (ResNet/EfficientNet), Streamlit/Flask, data augmentation
+🚀 Production: Augmentation pipeline for robustness • Batch inference API • CDN integration for assets • Latency monitoring
+
+📈 **Stock Price Predictor (LSTM)**
+🧠 Concept: Time-series forecasting of stock prices using LSTM networks with sequential price data
+🛠️ Tools: PyTorch, LSTM layers, pandas for time-series, technical indicators library
+🚀 Production: Real-time data ingestion • Prediction interval reporting • Automated retraining triggers • Backtesting framework
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔵 **LEVEL 2: NLP & TEXT INTELLIGENCE**
+
+📄 **Resume Parser with NER**
+🧠 Concept: Extract structured information (name, email, skills, experience) from resumes using Named Entity Recognition
+🛠️ Tools: spaCy, HuggingFace transformers, PyTorch, custom NER training, pdfplumber
+🚀 Production: Multi-format handling (PDF/DOCX/TXT) • PII redaction for privacy • JSON schema validation • Async processing queue
+
+🎬 **Movie Review Sentiment Classifier**
+🧠 Concept: Binary/multi-class sentiment analysis on movie reviews with deep learning architectures
+🛠️ Tools: BiLSTM or DistilBERT, IMDB dataset, HuggingFace Transformers, tokenizers
+🚀 Production: Batch inference API with async • Confidence scoring with thresholds • A/B testing for model comparison • Feedback collection
+
+📩 **Email Spam Detector**
+🧠 Concept: Classify emails as spam/ham using Bag-of-Words/TF-IDF features with Logistic Regression or neural fine-tuning
+🛠️ Tools: sklearn, PyTorch (optional), nltk, email parsing libraries, feature extraction pipelines
+🚀 Production: Sub-100ms latency inference • Adaptive thresholding • Feedback loop for false positives • Real-time model updates
+
+📝 **Text Summarization Tool**
+🧠 Concept: Generate abstractive summaries of long texts using pre-trained sequence-to-sequence models
+🛠️ Tools: HuggingFace Transformers (T5/BART), Streamlit UI, sentencepiece, rouge/bertscore metrics
+🚀 Production: Configurable summary length • Quality metrics logging • Caching for repeated inputs • Rate limiting for API calls
+
+🔍 **Semantic Search Engine**
+🧠 Concept: Vectorize FAQ documents and perform cosine similarity search for relevant question answering
+🛠️ Tools: sentence-transformers, FAISS for vector indexing, numpy, query preprocessing pipeline
+🚀 Production: Incremental index updates • Approximate nearest neighbors for speed • Relevance feedback logging • Query analytics dashboard
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🟣 **LEVEL 3: LLMs, LANGCHAIN & RAG**
+
+📚 **Q&A Chatbot for Company Policies**
+🧠 Concept: Retrieval-augmented Q&A system ingesting company PDFs with conversation memory for contextual answers
+🛠️ Tools: LangChain retrieval, Chroma/FAISS vector store, LLM API, Redis/Postgres memory
+🚀 Production: Document versioning with change tracking • Role-based access control • Conversation logging with PII redaction • Source citation display
+
+🏥 **RAG-Based Medical Assistant**
+🧠 Concept: Answer medical queries using domain-specific PDFs with accurate source citations and safety disclaimers
+🛠️ Tools: LangChain + Chroma + OpenAI/Ollama, Streamlit UI, medical NER models, citation verification
+🚀 Production: Medical disclaimer on every response • Source citation verification pipeline • HIPAA-compliant logging • Confidence thresholding for critical answers
+
+🧠 **Resume Screener Agent**
+🧠 Concept: Match resumes to job descriptions with scoring, gap analysis, and improvement suggestions using prompt engineering
+🛠️ Tools: OpenAI API, prompt engineering techniques, LangChain orchestration, embedding similarity
+🚀 Production: Bias mitigation with fairness metrics • Explainable scoring breakdown • GDPR-compliant data retention • Audit trail for decisions
+
+🔧 **LangChain Agent with Tools**
+🧠 Concept: Agent that dynamically selects and executes tools (calculator, Wikipedia, PDF reader) using ReAct or function calling
+🛠️ Tools: LangChain agent frameworks, tool integrations, LLM with function calling, error handling middleware
+🚀 Production: Tool execution sandboxing • Timeout and retry handling • Comprehensive audit trail • Rate limiting per tool
+
+🗣️ **LangGraph Conversational Agent**
+🧠 Concept: Stateful LLM agent for onboarding workflows with persistent memory and conditional conversation flows
+🛠️ Tools: LangGraph for state management, Redis/Postgres memory, LLM API, conversation routing logic
+🚀 Production: State persistence across sessions • Graceful degradation on API errors • User session authentication • Conversation analytics
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🟠 **LEVEL 4: AGENTIC AI & MULTI-AGENT SYSTEMS**
+
+👥 **Multi-Agent Research System (CrewAI)**
+🧠 Concept: Collaborative agent team (Researcher, Writer, Designer) for end-to-end content creation: research → summary → visual generation
+🛠️ Tools: CrewAI framework, LangChain tools, DALL-E/Stable Diffusion APIs, task queue management
+🚀 Production: Agent coordination protocol • Centralized task queue • Output quality validation • Human review escalation option
+
+🌐 **Autonomous Market Research Agent**
+🧠 Concept: Browse competitor websites autonomously to extract pricing, features, and market trends with structured reporting
+🛠️ Tools: CrewAI + LangChain + Playwright/Selenium, data extraction parsers, structured output schemas
+🚀 Production: robots.txt compliance • Adaptive rate limiting • Data freshness monitoring • Block detection and rotation strategies
+
+⚡ **Groq-Powered Real-Time Assistant**
+🧠 Concept: Lightning-fast Q&A assistant optimized for low-latency applications using high-throughput inference
+🛠️ Tools: LangChain + Groq API, Vercel/Render serverless, caching layers, fallback mechanisms
+🚀 Production: Response time SLA monitoring • Fallback to slower model on errors • Cost tracking per query • Budget cap enforcement
+
+📊 **LLMOps Evaluation Dashboard**
+🧠 Concept: Track prompt versions, latency metrics, output quality scores, and token usage for LLM application observability
+🛠️ Tools: LangSmith tracing, Weights & Biases, custom metrics collectors, Prometheus/Grafana integration
+🚀 Production: Automated metric collection • Alerting rules for degradation • Version comparison UI • Exportable reports for stakeholders
+
+💼 **Full-Stack GenAI Portfolio App**
+🧠 Concept: Integrated application featuring RAG chatbot, PDF assistant, and resume screener with unified user experience
+🛠️ Tools: Streamlit frontend + FastAPI backend, HuggingFace + LangChain, vector database, JWT authentication
+🚀 Production: Microservice architecture • API authentication • Scalable inference infrastructure • Load balancing and health checks
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔴 **LEVEL 5: ADVANCED & EXPERT PROJECTS**
+
+📜 **Legal Document Analyzer**
+🧠 Concept: Extract key clauses (dates, obligations, risks) from long legal PDFs with chunking, risk highlighting, and summarization
+🛠️ Tools: LangChain document splitting + LLM analysis + FAISS clause retrieval + legal NER models
+🚀 Production: Map-reduce for long documents • Legal disclaimer integration • Citation tracking to source pages • Confidence scoring per extraction
+
+🌍 **Multi-Language Translator Agent**
+🧠 Concept: Contextually accurate translation preserving sentiment and cultural nuances with multi-agent review workflow
+🛠️ Tools: GPT-4o / Mistral + CrewAI coordination, language detection, cultural adaptation rules, QA agents
+🚀 Production: Pre-translation language detection • Cultural adaptation per locale • Human-in-the-loop QA • Quality metrics tracking
+
+👨‍💻 **Code Explainer Agent**
+🧠 Concept: Convert code snippets to human-readable explanations with line-by-line breakdown and improvement suggestions
+🛠️ Tools: LangChain orchestration + GPT-4 reasoning + AST parsers + code sanitization middleware
+🚀 Production: Code sanitization to remove secrets • Auto language/framework detection • Configurable explanation depth • Output validation
+
+📝 **AI-Summarized Meeting Notes Bot**
+🧠 Concept: Transform meeting transcripts into structured action items, topic summaries, and speaker attribution with delivery options
+🛠️ Tools: Whisper STT + OpenAI LLM + calendar/email APIs + speaker diarization + action item extraction
+🚀 Production: Speaker diarization validation • Action item confidence scoring • Calendar/email integration hooks • Delivery confirmation tracking
+
+📧 **Multi-Agent Email Responder**
+🧠 Concept: Auto-reply to categorized emails (support/billing/sales) using classifier → composer → QA checker agent pipeline
+🛠️ Tools: CrewAI agent team + LangGraph workflow + LangChain tools + email authentication (SPF/DKIM)
+🚀 Production: Email authentication for outbound • Response approval workflow for sensitive categories • Escalation rules • Sentiment monitoring
+
+📚 **Academic Research Agent**
+🧠 Concept: Input research topic → search academic papers → summarize findings → format citations with retriever → critic → output flow
+🛠️ Tools: Arxiv API + OpenAI synthesis + LangGraph orchestration + citation formatters + plagiarism detection
+🚀 Production: Citation format validation (APA/MLA/Chicago) • Plagiarism detection against sources • Source credibility scoring • Export to multiple formats
+
+▶️ **Chat Over YouTube Transcripts**
+🧠 Concept: Upload YouTube link → extract transcript → enable chat-based Q&A over video content using embeddings and LLM
+🛠️ Tools: youtube-transcript-api + sentence embeddings + LangChain + LLM + FAISS retrieval + context management
+🚀 Production: Fallback when transcripts unavailable • Video metadata caching • Conversation context management • Transcript preprocessing pipeline
+
+🗃️ **Conversational Form Filler Bot**
+🧠 Concept: Fill complex forms (KYC, applications) via multi-turn dialogue with memory retention and structured JSON output
+🛠️ Tools: LangChain dialogue management + RAG for form schema + memory modules + field validation logic
+🚀 Production: Field-level validation per step • PII encryption in transit/at rest • Form schema versioning • Audit trail for compliance
+
+👨‍🏫 **Role-Playing Tutor Agent**
+🧠 Concept: Simulate tutoring sessions with adaptive Q&A, quizzes, and guided learning modes with progress tracking
+🛠️ Tools: Claude/OpenAI reasoning + LangChain memory for student profile + pedagogical prompt templates + knowledge graphs
+🚀 Production: Learning progress tracking with knowledge graphs • Difficulty adaptation logic • Curriculum-aligned content validation • Session analytics
+
+⚙️ **AI Workflow Builder Agent**
+🧠 Concept: Convert natural language prompts to executable code pipelines (e.g., "Clean CSV and classify age") with function calling
+🛠️ Tools: CrewAI task decomposition + LangGraph workflow + function calling for code generation + testing framework
+🚀 Production: Code safety sandboxing with resource limits • Automatic dependency management • Output testing for generated code • Error recovery strategies
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚡ **LEVEL 6: WORKFLOW AUTOMATION & REAL-TIME AI**
+
+🧠 **Data Science Pipeline Planner Agent**
+🧠 Concept: Understand user intent + dataset characteristics → output complete pipeline code with auto task selection and preprocessing recommendations
+🛠️ Tools: CrewAI + LangGraph + LangChain + Pandas Profiling + code generation + validation framework
+🚀 Production: Pipeline validation with unit tests • Resource estimation before execution • Error recovery with checkpointing • Dependency management
+
+📈 **AutoDashboard Generator**
+🧠 Concept: User intent + raw data → generate Streamlit dashboard code with intelligent chart suggestions and auto data cleaning
+🛠️ Tools: GPT-4o code generation + Altair/Plotly visualization + Streamlit deployment + data profiling
+🚀 Production: Data privacy checks before processing • Interactive element testing • One-click cloud deployment • Dashboard performance monitoring
+
+🛠️ **Self-Correcting Code Execution Agent**
+🧠 Concept: Problem statement → generate code → execute → debug → fix → output with planner → generator → executor → debugger loop
+🛠️ Tools: LangGraph/CrewAI orchestration + REPL tool for execution + LLM debugging + iteration control
+🚀 Production: Execution timeout limits • Resource usage monitoring • Infinite loop prevention • Iteration counter with max limits
+
+📄 **AI Form Designer from Text**
+🧠 Concept: Natural language prompt → generate HTML/React form with validations + FastAPI backend endpoint export
+🛠️ Tools: GPT prompt-to-code + React/Streamlit frontend + FastAPI backend + validation schema generation
+🚀 Production: WCAG 2.1 accessibility compliance • Form validation unit tests • Input sanitization for security • Export with dependency manifest
+
+🎯 **Drag & Drop AI Workflow Composer**
+🧠 Concept: Describe workflow in natural language → generate visual diagram (Mermaid.js) + executable Python logic with conditional branching
+🛠️ Tools: LangGraph workflow logic + Mermaid.js visualization + Pydantic schema validation + code export
+🚀 Production: Browser-based workflow visualization • Logic validation against business rules • Export to executable format • Version control integration
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔥 **LEVEL 7: REAL-TIME VISION, VOICE & PRODUCTION SYSTEMS**
+
+🧾 **Smart Invoice Parser (PDF/Image to JSON)**
+🧠 Concept: Extract structured invoice data (invoice_no, date, vendor, items, GST) using OCR + key-value detection + table extraction
+🛠️ Tools: PaddleOCR + pdfplumber + HuggingFace NER + LangChain orchestration + confidence scoring
+🚀 Production: Multi-format invoice template registry • Per-field confidence scoring with thresholds • Human review queue for low-confidence • Batch processing support
+
+🎙️ **Voice-Powered Assistant**
+🧠 Concept: Voice interface for AI tasks: read emails, fetch summaries, generate replies with Whisper → LLM → TTS → Action pipeline
+🛠️ Tools: Whisper STT + pyttsx3/Amazon Polly TTS + LangChain orchestration + Streamlit UI + VAD
+🚀 Production: Voice activity detection to reduce false triggers • Background noise preprocessing • Action confirmation for irreversible ops • Multi-language support
+
+🛒 **Real-Time Product Image Finder**
+🧠 Concept: Capture/upload product image → search visually similar products using combined visual + text embedding search
+🛠️ Tools: CLIP multimodal embeddings + FAISS/Chroma vector indexing + LangChain query orchestration + ranking logic
+🚀 Production: Image preprocessing standardization • Incremental index updates • Relevance ranking with user feedback • Latency optimization
+
+📇 **Business Card → Contact Book**
+🧠 Concept: Photo of business card → extract name/email/org → add to Google Contacts/Airtable with deduplication
+🛠️ Tools: EasyOCR text extraction + regex/SpaCy entity parsing + FastAPI backend + contact API integrations
+🚀 Production: Contact deduplication with fuzzy matching • User consent workflow before external writes • Sync error handling with retry • Notification system
+
+🧾 **Retail Shelf Monitor (YOLO + CV)**
+🧠 Concept: Real-time detection of product positions, pricing labels, stock gaps with planogram compliance alerts for retail
+🛠️ Tools: YOLOv8 object detection + OpenCV video processing + Flask alert API + planogram configuration
+🚀 Production: Real-time FPS optimization targets • Configurable alert thresholds per category • Model retraining pipeline for new SKUs • Edge deployment support
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🏆 **LEVEL 8: PRODUCTION-GRADE AGENTIC SYSTEMS**
+
+🤝 **The "Hybrid" E-commerce Support Bot**
+🧠 Concept: Customer support bot routing informational queries to RAG and transactional queries (refunds) to action tools with semantic understanding
+🛠️ Tools: LangChain RAG + tool integration + semantic router for query classification + intent verification
+🚀 Production: Routing Logic using semantic router to distinguish informational vs transactional queries • Safety Guardrails with separate LLM call to verify intent/extract parameters before API execution • Observability logging all tool calls and token usage to LangSmith/Arize
+
+🧠 **The "Smart" Document Summarizer**
+🧠 Concept: Summarize specific clauses (liability, termination) from long legal contracts with clause-level extraction and risk highlighting
+🛠️ Tools: LangChain document handling + LLM summarization + LangGraph workflow control + caching layers
+🚀 Production: Map-Reduce Strategy to handle documents exceeding context window via chunking and summary collapsing • Streaming output token-by-token to frontend for responsive UX • Caching with ExactMatchCache/SemanticCache to avoid re-processing identical documents and reduce API costs
+
+🔄 **The "Resilient" Content Creator Pipeline**
+🧠 Concept: Agent researches topic → writes blog post → creates LinkedIn caption with critique loop for quality assurance
+🛠️ Tools: LangGraph stateful workflow with conditional edges, review nodes, Postgres persistence, email integration
+🚀 Production: Graph Structure with linear chain + Review node (Research→Write→Critique→[loop if fail]→Publish) • Persistence saving graph state to Postgres for crash recovery and resume capability • Human-in-the-Loop pausing after draft for user approval/edit before final publication
+
+🎯 **The "Proactive" Sales Qualifier Agent**
+🧠 Concept: Take lead email → research company → score lead → draft intro email with conditional routing based on company profile
+🛠️ Tools: LangGraph workflow + Web Search tools + lead scoring logic + structured state management
+🚀 Production: State Management maintaining structured LeadState (industry, size, tech stack) updated incrementally • Conditional Branching routing Enterprise leads to specialized pitch nodes vs SMB to quick pitch flow • Rate Limiting with exponential backoff logic for external API calls (LinkedIn/Crunchbase)
+
+🎓 **The "Context-Aware" Coding Tutor**
+🧠 Concept: AI tutor remembering student progress across sessions with adaptive step-by-step teaching and secure code execution
+🛠️ Tools: LangGraph session flow + Vector DB memory for student profile + adaptive difficulty logic + Docker sandboxing
+🚀 Production: Long-Term Memory storing user facts ("struggles with recursion") in vector store retrieved at session start • Adaptive Difficulty node updating difficulty state based on answer correctness • Sandboxing executing user code in secure Docker containers to prevent security risks
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 **LEVEL 9: AUTONOMOUS & DEEP AGENT SYSTEMS**
+
+🔍 **The "Deep Research" Analyst**
+🧠 Concept: Autonomous agent takes broad topic → breaks into subtasks → searches data → compiles report → saves PDF with citations
+🛠️ Tools: Deep Agents SDK for planning + file management + LLM synthesis + citation verification + PDF generation
+🚀 Production: Planning utilizing built-in write_todos tool for agent to generate and track task list • File System Management saving intermediate raw data to files to avoid context window overflow • Citations enforcement requiring every claim in final report to reference specific source URL with verification
+
+🧪 **The "Autonomous" QA Engineer**
+🧠 Concept: Agent reads GitHub repo → generates unit tests for uncovered files → runs tests → fixes failures → creates PR
+🛠️ Tools: Deep Agents task orchestration + Sandbox execution + GitHub API + pytest integration + error parsing
+🚀 Production: Subagent Spawning using task tool to create dedicated "Test Writer" subagent per file for context isolation • Sandbox Execution writing tests to file → running pytest in isolated env → reading errors → iterating until pass • PR Creation using GitHub API to open Pull Request with generated test changes after validation
+
+💹 **The "Hedge Fund" Trading Simulator**
+🧠 Concept: Multi-agent team (Manager, Researcher, Bull/Bear Analysts, Risk Manager) simulating investment decisions with debate resolution
+🛠️ Tools: LangGraph multi-agent orchestration + shared state management + conditional debate flows + decision logging
+🚀 Production: Hierarchical Architecture with Manager setting strategy, Researchers gathering data, Analysts generating arguments, Risk Manager checking exposure • Shared State "Market Dashboard" all agents read/write to • Debate Loop triggering agent message exchange when Bull/Bear disagreement exceeds threshold before Manager decision
+
+🔧 **The "Self-Healing" Data Pipeline Manager**
+🧠 Concept: Autonomous system monitors data pipelines (Airflow/Dagster) → diagnoses failures → attempts fixes → verifies → escalates if needed
+🛠️ Tools: Deep Agents autonomy + LangGraph workflow + API tools for monitoring + log analysis + remediation actions
+🚀 Production: Observability Integration connecting to Datadog/Prometheus via API tools for alert ingestion • Diagnostic Flow with structured steps (alert→log analysis→root cause→action→verify→escalate) • Immutable Audit Trail logging every agent action for compliance and post-incident review
+
+🛠️ **The "Technical" Maintenance Assistant** *(Alternate Expert Project)*
+🧠 Concept: Chatbot for field technicians to query complex equipment manuals (HVAC/CNC/Wind Turbines) handling tables, diagrams, strict procedures
+🛠️ Tools: LangChain RAG orchestration + LLM reasoning + multi-modal document parsers + procedural validation logic
+🚀 Production: Multi-modal document parsing handling tables/diagrams/procedural steps with specialized extractors • Procedure step validation ensuring safety-critical instructions are accurately retrieved • Offline mode support for field use with cached manual embeddings and local LLM fallback
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ **Key Production Patterns Across All Levels:**
+• 🔐 Security: PII redaction, input sanitization, sandboxing, authentication
+• 📊 Observability: Logging, metrics, tracing, alerting, audit trails
+• 🔄 Reliability: Retry logic, fallbacks, circuit breakers, graceful degradation
+• 📈 Scalability: Batch processing, async inference, load balancing, caching
+• 🧪 Quality: Validation, testing, A/B testing, human-in-the-loop, confidence thresholds
+• 💰 Cost: Token tracking, budget caps, caching, efficient model selection
 
-- 📄 Invoice Data Extractor (PDF to JSON)
-- 📊 Startup Funding Dashboard
-- 🏠 House Price Predictor
-- ❤️ Loan Default Risk Classifier
-- 🚢 Titanic Survival Predictor (Streamlit)
-
-### 🔹 Deep Learning with PyTorch
-
-- 🔢 Handwritten Digit Recognizer (MNIST + CNN)
-- 💸 Customer Churn Classifier (ANN)
-- 📰 Fake News Detector (LSTM)
-- 📷 Product Image Classifier
-- 📈 Stock Price Predictor (LSTM)
-
-### 🔹 NLP & LLMs
-
-- 📃 Resume Parser with NER
-- 😄 Sentiment Analysis (IMDB/BERT)
-- 📬 Spam Detector (TF-IDF + LR)
-- 📄 Abstractive Text Summarizer (T5/BART)
-- 🔍 Semantic FAQ Search (Sentence Transformers + FAISS)
-
-### 🔹 LangChain, RAG & Agents
-
-- 💬 PDF Chatbot with Memory
-- 👩‍⚕️ Medical Q&A Assistant (RAG + Chroma)
-- 📥 Resume Screener Agent (LangChain + Prompts)
-- 🌐 LangGraph Conversational Agent
-- 🕸️ Market Research Agent (CrewAI + Browser Tool)
-
-### 🔹 Vision, Voice, and Automation
-
-- 📸 Business Card Reader (OCR + NER)
-- 🛒 Retail Shelf Monitor (YOLO + OpenCV)
-- 🧾 Smart Invoice Parser (OCR + LayoutLM)
-- 🗣️ Voice-Powered Assistant (Whisper + TTS)
-- 📷 Product Image → Similar Search (CLIP + Chroma)
-
-<br>
-
-
-<h1 align="center">🚀 25 Real-World AI/ML/NLP + GenAI Projects</h1>
-
-<p align="center">
-  🎯 Hands-on Projects to Master AI Engineering  
-  🔬 From Python & ML Basics to LLMs, Agents, and Full-Stack GenAI  
-  📁 Fully documented and structured for learning + showcasing skills
-</p>
-
----
-
-## 🔹 Basic Python, EDA, and ML Projects
-
-1. **🧾 Invoice Data Extractor**  
-   📥 Input: CSV/PDF invoices → 📤 Output: Structured JSON (items, totals, dates)  
-   🧠 Concepts: File I/O, OOP, Regex  
-
-2. **📊 Startup Funding EDA Dashboard**  
-   - Visualize funding by city, sector, and year  
-   - Tools: `Pandas`, `Seaborn`, `Matplotlib`  
-
-3. **🏠 House Price Prediction**  
-   - Regression model (sklearn pipeline)  
-   - Data: House size, location, rooms  
-   - Concepts: Linear regression, feature scaling, cross-validation  
-
-4. **💳 Loan Default Risk Classifier**  
-   - Predict loan default  
-   - Models: `RandomForest`, `XGBoost`  
-   - Includes: Feature engineering, SMOTE for imbalance  
-
-5. **🚢 Titanic Survival Predictor**  
-   - Classification model using Decision Tree + Grid Search  
-   - Interactive frontend: `Streamlit`
-
----
-
-## 🔹 Deep Learning with PyTorch
-
-1. **💼 Customer Churn Prediction (ANN)**  
-   - Dataset: Bank customers (tenure, balance, activity)  
-   - Techniques: Dropout, custom datasets  
-
-2. **✍️ Handwritten Digit Recognizer (CNN)**  
-   - Dataset: MNIST  
-   - Evaluate: Accuracy vs model tuning  
-
-3. **📰 Fake News Detection (RNN/LSTM)**  
-   - Inputs: News text  
-   - Embeddings: TF-IDF, Word2Vec  
-   - Dataset: FakeNewsNet  
-
-4. **🛍️ Image Classifier for Products**  
-   - Input: Amazon/eCommerce product images  
-   - Deployment: Streamlit or Flask  
-
-5. **📈 Stock Price Predictor (LSTM)**  
-   - Input: Time-series daily prices  
-   - Output: Future price forecasts  
-   - Stack: LSTM + PyTorch
-
----
-
-## 🔹 NLP and Text Intelligence
-
-1. **📄 Resume Parser with NER**  
-   - Extract name, email, skills, experience  
-   - Tools: `spaCy`, HuggingFace, PyTorch  
-
-2. **🎬 Movie Review Sentiment Classifier**  
-   - Dataset: IMDB  
-   - Models: BiLSTM or DistilBERT  
-
-3. **📩 Email Spam Detector**  
-   - Method: Bag-of-Words/TF-IDF + Logistic Regression  
-   - Bonus: PyTorch fine-tuning  
-
-4. **📝 Text Summarization Tool**  
-   - Models: T5 or BART (HuggingFace)  
-   - UI: `Streamlit` for input/output  
-
-5. **🔍 Semantic Search Engine**  
-   - Vectorize FAQs and perform cosine similarity search  
-   - Tools: `sentence-transformers`, `FAISS`
-
----
-
-## 🔹 LLMs, LangChain, and RAG Projects
-
-1. **📚 Q&A Chatbot for Company Policies**  
-   - Ingest company PDFs  
-   - LangChain retrieval + memory  
-
-2. **🏥 RAG-Based Medical Assistant**  
-   - Input: Domain PDFs  
-   - Stack: `LangChain + Chroma + OpenAI/Ollama`  
-   - UI: `Streamlit`  
-
-3. **🧠 Resume Screener Agent**  
-   - Input: Job description + Resume  
-   - Output: Matching score, suggestions  
-   - Tools: Prompt engineering + OpenAI  
-
-4. **🔧 LangChain Agent with Tools**  
-   - Use tools like calculator, Wikipedia, PDF reader  
-   - Mode: `ReAct` or `OpenAIFunctions`  
-
-5. **🗣️ LangGraph Conversational Agent**  
-   - Stateful LLM with LangGraph + memory  
-   - Use Case: Onboarding bot
-
----
-
-## 🔹 Agentic AI, Deployment, & MLOps Projects
-
-1. **👥 Multi-Agent Research System (CrewAI)**  
-   - Agents: Researcher, Writer, Designer  
-   - Task: Research topic → write summary → generate image  
-
-2. **🌐 Autonomous Market Research Agent**  
-   - Browse competitor websites  
-   - Extract prices and trends  
-   - Tools: CrewAI + LangChain + Browser tools  
-
-3. **⚡ Groq-Powered Real-Time Assistant**  
-   - Lightning-fast Q&A  
-   - Deployment: Vercel or Render  
-   - Stack: LangChain + Groq API  
-
-4. **📊 LLMOps Evaluation Dashboard**  
-   - Track prompt versions, latency, output metrics  
-   - Stack: LangSmith, Weights & Biases  
-
-5. **💼 Full-Stack GenAI Portfolio App**  
-   - Includes:
-     - 🔹 RAG chatbot  
-     - 🔹 PDF assistant  
-     - 🔹 Resume screener  
-     - 💻 Streamlit frontend + FastAPI backend  
-     - 🤖 HuggingFace + LangChain  
-   - Output: Shareable product demo
-
-<br>
-<h1 align="center">🔥 Advanced Projects in AI, NLP, LLM & Agentic Intelligence</h1>
-
-<p align="center">
-  📚 20+ Expert-Level Projects to Go Beyond the Basics  
-  🧠 NLP • LangChain • CrewAI • Vision • Automation  
-  🚀 Built for Innovation, Portfolio, and Product Readiness
-</p>
-
----
-
-## 🤖 10 Advanced Projects (NLP + LLM + Agent AI)
-
-### 1. 📜 Legal Document Analyzer
-- Extract key info (dates, obligations, risk clauses)
-- Chunk long PDFs, highlight risks, summarize
-- **Tools**: LangChain + LLM + FAISS
-
-### 2. 🌍 Multi-Language Translator Agent
-- Translate with contextual accuracy
-- Bonus: Sentiment-preserving translations + multi-agent review
-- **Tools**: GPT-4o / Mistral + CrewAI
-
-### 3. 👨‍💻 Code Explainer Agent
-- Turn code snippets into human explanations
-- Features: line-by-line breakdown + improvement tips
-- **Tools**: LangChain + GPT-4 + code metadata
-
-### 4. 📝 AI-Summarized Meeting Notes Bot
-- Input: Meeting transcript → Output: Action items, topics, speakers
-- Deliver summary via dashboard or email
-- **Tools**: Whisper + OpenAI LLM
-
-### 5. 📧 Multi-Agent Email Responder
-- Auto-reply to categorized emails: support, billing, sales
-- Agents: Classifier → Composer → QA checker
-- **Tools**: CrewAI + LangGraph + LangChain
-
-### 6. 📚 Academic Research Agent
-- Input topic → Search → Summarize → Format citations
-- **Flow**: Paper Retriever → Critic → Markdown Output
-- **Tools**: Arxiv API + OpenAI + LangGraph
-
-### 7. ▶️ Chat Over YouTube Transcripts
-- Upload YouTube link → Chat with transcript
-- Use: `youtube-transcript-api`, embeddings, LLM
-- **Tools**: LangChain + LLM + FAISS
-
-### 8. 🗃️ Conversational Form Filler Bot
-- Fill forms like KYC via dialogue
-- Multi-turn memory + structured JSON output
-- **Tools**: LangChain + RAG + memory
-
-### 9. 👨‍🏫 Role-Playing Tutor Agent
-- Simulate tutoring: ask, grade, give hints
-- Modes: Q&A, quiz, guided learning
-- **Tools**: Claude/OpenAI + LangChain memory
-
-### 10. ⚙️ AI Workflow Builder Agent
-- Prompt → Pipeline → Executable Code
-- Example: “Clean CSV and classify age” → full working script
-- **Tools**: CrewAI + LangGraph + Function Calling
-
----
-
-## 🔁 5 Workflow Automation Projects
-
-### 1. 🧠 Data Science Pipeline Planner Agent
-- Understand intent + dataset → Output pipeline code
-- Auto-select task type, recommend preprocessing
-- **Stack**: CrewAI + LangGraph + LangChain + Pandas Profiling
-
-### 2. 📈 AutoDashboard Generator
-- Intent + raw data → Streamlit dashboard code
-- Suggest charts (bar, pie, map), auto-clean data
-- **Stack**: GPT-4o + Altair/Plotly + Streamlit
-
-### 3. 🛠️ Self-Correcting Code Execution Agent
-- Problem → Code → Run → Debug → Fix → Output
-- Planner → Generator → Executor → Debugger
-- **Stack**: LangGraph or CrewAI + REPL tool
-
-### 4. 📄 AI Form Designer from Text
-- Prompt: “Create a job application form...” → HTML/React with validations
-- Exports: Web form + FastAPI endpoint
-- **Stack**: GPT + prompt-to-code + React/Streamlit
-
-### 5. 🎯 Drag & Drop AI Workflow Composer
-- Describe flow → Get visual diagram + Python logic
-- “If email urgent → summarize → send to Slack”
-- **Stack**: LangGraph + Mermaid.js + Pydantic
-
----
-
-## 🛠️ 5 Real-Time AI Projects (Vision + Voice + Extraction)
-
-### 1. 🧾 Smart Invoice Parser (PDF/Image to JSON)
-- Extract invoice_no, date, vendor, items, GST
-- OCR + key-value detection + table extraction
-- **Stack**: PaddleOCR + pdfplumber + HuggingFace + LangChain
-
-### 2. 🎙️ Voice-Powered Assistant
-- Talk to your AI: read email, fetch summary, reply
-- Whisper → LLM → TTS → Action
-- **Stack**: Whisper + pyttsx3 + LangChain + Streamlit
-
-### 3. 🛒 Real-Time Product Image Finder
-- Capture/upload image → Search similar products
-- Visual + text embedding search
-- **Stack**: CLIP + FAISS + Chroma + LangChain
-
-### 4. 📇 Business Card → Contact Book
-- Photo → extract name, email, org
-- Add to Google Contacts / Airtable
-- **Stack**: EasyOCR + regex + SpaCy + FastAPI
-
-### 5. 🧾 Retail Shelf Monitor (YOLO + CV)
-- Detect product positions, pricing, stock gaps
-- Alert when planogram not followed
-- **Stack**: YOLOv8 + OpenCV + Flask
-
----
 
 
 
